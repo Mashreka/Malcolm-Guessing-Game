@@ -24,7 +24,7 @@ public class Main {
                     System.out.println("Det var rätt, Bra gissat du! ");
                     System.out.println("Det tog dig totalt " + tries + " Försök"); //En print som berättar hur många försök det krävdes för användaren att gissa rätt
                 }
-                else if (checkGuess(guess,randomNumber)==-2) {
+                else if (checkGuess(guess,randomNumber)==+1) {
                     System.out.println("FEL! Talet är högre än Försök igen.  ");
                 } else {
                     System.out.println("FEL! Talet är lägre än försök igen.");
@@ -43,7 +43,7 @@ public class Main {
         } else if (guess < randomNumber) {
             return -1; // Guess is lower than the random number
         } else {
-            return -2; // Guess is higher than the random number
+            return +1; // Guess is higher than the random number
         }
     }
     //Förenklade playAgain-metoden genom att direkt returnera resultatet av jämförelsen istället för att använda en separat variabel.
