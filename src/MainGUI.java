@@ -39,7 +39,7 @@ public class MainGUI {
 
                 if (checkGuessResult(randomNumber, guess) == 0) {
                     showGameOverMessage("Congratulations! You guessed it right.\nIt took you " + tries + " tries.\nDo you want to play again?");
-                } else if (checkGuessResult(guess, randomNumber) == -2) {
+                } else if (checkGuessResult(guess, randomNumber) == +1) {
                     showWrongGuessMessage("Wrong guess! The number is higher. Try again.");
                 } else {
                     showWrongGuessMessage("Wrong guess! The number is lower. Try again.");
@@ -98,7 +98,7 @@ public class MainGUI {
         } else if (guess < randomNumber) {
             return -1; // Guess is lower than the random number
         } else {
-            return -2; // Guess is higher than the random number
+            return +1; // Guess is higher than the random number
         }
     }
     // showGameOverMessage and showWrongGuessMessage methods display a message dialog with the provided message using the JOptionPane class.
